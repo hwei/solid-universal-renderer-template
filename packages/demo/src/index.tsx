@@ -1,5 +1,5 @@
 import { createSignal, onCleanup } from "solid-js";
-import { render, VElement, createElement } from "solid-canvaskit-renderer";
+import { render, VElement } from "solid-canvaskit-renderer";
 import Dummy from './Dummy';
 
 const random = () => Math.random() * 360;
