@@ -19,7 +19,7 @@ export const {
   spread,
   setProp,
   mergeProps
-} = createRenderer({
+} = createRenderer<VElement>({
   createElement(string: string): VElement {
     log('creating element', string);
     // return createThreeElement(string);

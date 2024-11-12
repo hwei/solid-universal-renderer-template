@@ -5,15 +5,8 @@ export default defineConfig({
   plugins: [
     solidPlugin({
       solid: {
+        moduleName: "solid-canvaskit-renderer",
         generate: "universal",
-
-        renderers: [
-          {
-            name: "universal",
-            moduleName: "solid-canvaskit-renderer",
-            elements: []
-          }
-        ]
       }
     })
   ]

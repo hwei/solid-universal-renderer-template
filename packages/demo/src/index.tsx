@@ -1,6 +1,6 @@
-import { createSignal, onCleanup, batch } from "solid-js";
-import { render, VElement } from "solid-canvaskit-renderer";
-import Repeat from "./Repeat";
+import { createSignal, onCleanup } from "solid-js";
+import { render, VElement, createElement } from "solid-canvaskit-renderer";
+import Dummy from './Dummy';
 
 const random = () => Math.random() * 360;
 const [frames, setFrames] = createSignal(Array(30).fill(0), { equals: false }); // for smoothing out FPS counter
@@ -25,10 +25,14 @@ function App() {
     last = now;
   });
 
+  const [count, setCount] = createSignal(0);
+
+  const increment = () => setCount(count() + 1);
+
   onCleanup(() => cancelAnimationFrame(frame));
 
   return (
-      <newleement></newleement>
+    <Dummy onClick={increment} />
   );
 }
 

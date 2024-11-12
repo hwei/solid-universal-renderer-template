@@ -2,5 +2,7 @@
   "extends": "../../tsconfig.json",
   "compilerOptions": {
     "rootDir": "src",
+    "jsxImportSource": "solid-canvaskit-renderer"
   },
+  "exclude": ["vite.config.js"]
 }
